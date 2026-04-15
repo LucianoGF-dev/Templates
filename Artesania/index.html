@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Artesanías Alma Viva — Piezas únicas hechas a mano con amor. Cerámica, tejidos, decoración, velas y regalos personalizados.">
+    <meta name="keywords"
+        content="artesanías, hecho a mano, cerámica, tejidos, decoración, regalos personalizados, handmade">
+    <meta name="author" content="Artesanías Alma Viva">
+    <meta property="og:title" content="Artesanías Alma Viva — Hecho a mano con amor">
+    <meta property="og:description"
+        content="Descubre piezas únicas creadas por artesanos locales. Calidad, autenticidad y tradición en cada detalle.">
+    <meta property="og:type" content="website">
+    <title>Artesanías Alma Viva — Hecho a Mano con Amor</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon emoji -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏺</text></svg>">
+</head>
+
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar__container">
+            <!-- Logo -->
+            <a href="#" class="navbar__logo" aria-label="Ir al inicio">
+                <span class="navbar__logo-icon">🏺</span>
+                <span class="navbar__logo-text">Alma Viva</span>
+            </a>
+
+            <!-- Menú desktop -->
+            <nav class="navbar__menu" id="navMenu" aria-label="Menú principal">
+                <a href="#inicio" class="navbar__link active">Inicio</a>
+                <a href="#categorias" class="navbar__link">Categorías</a>
+                <a href="#productos" class="navbar__link">Productos</a>
+                <a href="#nosotros" class="navbar__link">Nosotros</a>
+                <a href="#testimonios" class="navbar__link">Testimonios</a>
+                <a href="#contacto" class="navbar__link">Contacto</a>
+            </nav>
+
+            <!-- Iconos derecha -->
+            <div class="navbar__actions">
+                <button class="navbar__cart-btn" id="cartBtn" aria-label="Carrito de compras">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="navbar__cart-count" id="cartCount">0</span>
+                </button>
+
+                <!-- Botón hamburguesa -->
+                <button class="navbar__hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="navbar__hamburger-line"></span>
+                    <span class="navbar__hamburger-line"></span>
+                    <span class="navbar__hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú mobile -->
+        <div class="navbar__mobile-menu" id="mobileMenu">
+            <a href="#inicio" class="navbar__mobile-link">Inicio</a>
+            <a href="#categorias" class="navbar__mobile-link">Categorías</a>
+            <a href="#productos" class="navbar__mobile-link">Productos</a>
+            <a href="#nosotros" class="navbar__mobile-link">Nosotros</a>
+            <a href="#testimonios" class="navbar__mobile-link">Testimonios</a>
+            <a href="#contacto" class="navbar__mobile-link">Contacto</a>
+        </div>
+    </header>
+
+    <!-- ==================== CARRITO LATERAL ==================== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar" aria-label="Carrito de compras">
+        <div class="cart-sidebar__header">
+            <h2 class="cart-sidebar__title">🛒 Tu Carrito</h2>
+            <button class="cart-sidebar__close" id="cartClose" aria-label="Cerrar carrito">✕</button>
+        </div>
+        <div class="cart-sidebar__items" id="cartItems">
+            <!-- Items se agregan dinámicamente -->
+            <div class="cart-sidebar__empty" id="cartEmpty">
+                <p>Tu carrito está vacío</p>
+                <span class="cart-sidebar__empty-icon">🧺</span>
+                <p>Agrega productos para comenzar</p>
+            </div>
+        </div>
+        <div class="cart-sidebar__footer" id="cartFooter" style="display: none;">
+            <div class="cart-sidebar__total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn btn--primary btn--full" id="checkoutBtn">Finalizar Compra</button>
+        </div>
+    </aside>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="inicio">
+        <div class="hero__overlay"></div>
+        <div class="hero__content fade-in">
+            <span class="hero__subtitle">✦ Artesanías Únicas ✦</span>
+            <h1 class="hero__title">
+                Hecho a mano<br>
+                <span class="hero__title-accent">con amor</span>
+            </h1>
+            <p class="hero__description">
+                Cada pieza cuenta una historia. Descubre artesanías creadas con pasión,
+                tradición y los mejores materiales naturales.
+            </p>
+            <div class="hero__buttons">
+                <a href="#productos" class="btn btn--primary btn--lg">Comprar Ahora</a>
+                <a href="#nosotros" class="btn btn--outline btn--lg">Conocer Más</a>
+            </div>
+        </div>
+        <!-- Decoración -->
+        <div class="hero__scroll-indicator">
+            <span>Descubre</span>
+            <div class="hero__scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- ==================== CATEGORÍAS ==================== -->
+    <section class="categories section" id="categorias">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-header__tag">Explora</span>
+                <h2 class="section-header__title">Nuestras Categorías</h2>
+                <p class="section-header__description">
+                    Encuentra la pieza perfecta para cada espacio y ocasión
+                </p>
+            </div>
+
+            <div class="categories__grid">
+                <!-- Cerámica -->
+                <a href="#productos" class="category-card fade-in">
+                    <div class="category-card__image">
+                        <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&h=300&fit=crop"
+                            alt="Cerámica artesanal" loading="lazy">
+                    </div>
+                    <div class="category-card__overlay">
+                        <h3 class="category-card__title">Cerámica</h3>
+                        <span class="category-card__count">+45 productos</span>
+                    </div>
+                </a>
+
+                <!-- Decoración -->
+                <a href="#productos" class="category-card fade-in">
+                    <div class="category-card__image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop"
+                            alt="Decoración artesanal" loading="lazy">
+                    </div>
+                    <div class="category-card__overlay">
+                        <h3 class="category-card__title">Decoración</h3>
+                        <span class="category-card__count">+60 productos</span>
+                    </div>
+                </a>
+
+                <!-- Tejidos -->
+                <a href="#productos" class="category-card fade-in">
+                    <div class="category-card__image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=300&fit=crop"
+                            alt="Tejidos artesanales" loading="lazy">
+                    </div>
+                    <div class="category-card__overlay">
+                        <h3 class="category-card__title">Tejidos</h3>
+                        <span class="category-card__count">+38 productos</span>
+                    </div>
+                </a>
+
+                <!-- Regalos -->
+                <a href="#productos" class="category-card fade-in">
+                    <div class="category-card__image">
+                        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=400&h=300&fit=crop"
+                            alt="Regalos artesanales" loading="lazy">
+                    </div>
+                    <div class="category-card__overlay">
+                        <h3 class="category-card__title">Regalos</h3>
+                        <span class="category-card__count">+52 productos</span>
+                    </div>
+                </a>
+
+                <!-- Personalizados -->
+                <a href="#productos" class="category-card fade-in">
+                    <div class="category-card__image">
+                        <img src="https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=400&h=300&fit=crop"
+                            alt="Productos personalizados" loading="lazy">
+                    </div>
+                    <div class="category-card__overlay">
+                        <h3 class="category-card__title">Personalizados</h3>
+                        <span class="category-card__count">+25 productos</span>
+                    </div>
+                </a>
+
+                <!-- Accesorios -->
+                <a href="#productos" class="category-card fade-in">
+                    <div class="category-card__image">
+                        <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=300&fit=crop"
+                            alt="Accesorios artesanales" loading="lazy">
+                    </div>
+                    <div class="category-card__overlay">
+                        <h3 class="category-card__title">Accesorios</h3>
+                        <span class="category-card__count">+33 productos</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PRODUCTOS DESTACADOS ==================== -->
+    <section class="products section" id="productos">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-header__tag">Lo más vendido</span>
+                <h2 class="section-header__title">Productos Destacados</h2>
+                <p class="section-header__description">
+                    Piezas seleccionadas que enamoran por su belleza y calidad
+                </p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="products__filters fade-in">
+                <button class="products__filter-btn active" data-filter="todos">Todos</button>
+                <button class="products__filter-btn" data-filter="ceramica">Cerámica</button>
+                <button class="products__filter-btn" data-filter="tejidos">Tejidos</button>
+                <button class="products__filter-btn" data-filter="decoracion">Decoración</button>
+                <button class="products__filter-btn" data-filter="velas">Velas</button>
+            </div>
+
+            <div class="products__grid">
+                <!-- Producto 1 -->
+                <article class="product-card fade-in" data-category="ceramica">
+                    <div class="product-card__image">
+                        <img src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=500&h=500&fit=crop"
+                            alt="Jarrón de cerámica artesanal" loading="lazy">
+                        <span class="product-card__badge product-card__badge--new">Nuevo</span>
+                        <button class="product-card__wishlist" aria-label="Agregar a favoritos">♡</button>
+                        <div class="product-card__quick-actions">
+                            <button class="product-card__add-cart" data-name="Jarrón Terracota" data-price="45.00"
+                                data-img="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=100&h=100&fit=crop">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Cerámica</span>
+                        <h3 class="product-card__name">Jarrón Terracota Artesanal</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__reviews">(24)</span>
+                        </div>
+                        <div class="product-card__price">
+                            <span class="product-card__price-current">$45.00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto 2 -->
+                <article class="product-card fade-in" data-category="tejidos">
+                    <div class="product-card__image">
+                        <img src="https://images.unsplash.com/photo-1606722590583-6951b5ea92ad?w=500&h=500&fit=crop"
+                            alt="Manta tejida a mano" loading="lazy">
+                        <span class="product-card__badge product-card__badge--sale">-20%</span>
+                        <button class="product-card__wishlist" aria-label="Agregar a favoritos">♡</button>
+                        <div class="product-card__quick-actions">
+                            <button class="product-card__add-cart" data-name="Manta Tejida Natural" data-price="64.00"
+                                data-img="https://images.unsplash.com/photo-1606722590583-6951b5ea92ad?w=100&h=100&fit=crop">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Tejidos</span>
+                        <h3 class="product-card__name">Manta Tejida Natural</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__reviews">(31)</span>
+                        </div>
+                        <div class="product-card__price">
+                            <span class="product-card__price-current">$64.00</span>
+                            <span class="product-card__price-old">$80.00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto 3 -->
+                <article class="product-card fade-in" data-category="decoracion">
+                    <div class="product-card__image">
+                        <img src="https://images.unsplash.com/photo-1602523961358-f9f03dd557db?w=500&h=500&fit=crop"
+                            alt="Set de velas aromáticas" loading="lazy">
+                        <button class="product-card__wishlist" aria-label="Agregar a favoritos">♡</button>
+                        <div class="product-card__quick-actions">
+                            <button class="product-card__add-cart" data-name="Set Velas Aromáticas" data-price="32.00"
+                                data-img="https://images.unsplash.com/photo-1602523961358-f9f03dd557db?w=100&h=100&fit=crop">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Velas</span>
+                        <h3 class="product-card__name">Set Velas Aromáticas</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★☆</span>
+                            <span class="product-card__reviews">(18)</span>
+                        </div>
+                        <div class="product-card__price">
+                            <span class="product-card__price-current">$32.00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto 4 -->
+                <article class="product-card fade-in" data-category="ceramica">
+                    <div class="product-card__image">
+                        <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=500&h=500&fit=crop"
+                            alt="Tazas de cerámica artesanal" loading="lazy">
+                        <span class="product-card__badge product-card__badge--new">Nuevo</span>
+                        <button class="product-card__wishlist" aria-label="Agregar a favoritos">♡</button>
+                        <div class="product-card__quick-actions">
+                            <button class="product-card__add-cart" data-name="Set Tazas Rústicas" data-price="38.00"
+                                data-img="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=100&h=100&fit=crop">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Cerámica</span>
+                        <h3 class="product-card__name">Set Tazas Rústicas (x4)</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__reviews">(42)</span>
+                        </div>
+                        <div class="product-card__price">
+                            <span class="product-card__price-current">$38.00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto 5 -->
+                <article class="product-card fade-in" data-category="decoracion">
+                    <div class="product-card__image">
+                        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=500&h=500&fit=crop"
+                            alt="Cuadro decorativo artesanal" loading="lazy">
+                        <span class="product-card__badge product-card__badge--sale">-15%</span>
+                        <button class="product-card__wishlist" aria-label="Agregar a favoritos">♡</button>
+                        <div class="product-card__quick-actions">
+                            <button class="product-card__add-cart" data-name="Marco Decorativo Madera"
+                                data-price="55.00"
+                                data-img="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=100&h=100&fit=crop">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Decoración</span>
+                        <h3 class="product-card__name">Marco Decorativo Madera</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★☆</span>
+                            <span class="product-card__reviews">(15)</span>
+                        </div>
+                        <div class="product-card__price">
+                            <span class="product-card__price-current">$55.00</span>
+                            <span class="product-card__price-old">$65.00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto 6 -->
+                <article class="product-card fade-in" data-category="tejidos">
+                    <div class="product-card__image">
+                        <img src="https://images.unsplash.com/photo-1594040226829-7f251ab46d80?w=500&h=500&fit=crop"
+                            alt="Bolso tejido artesanal" loading="lazy">
+                        <button class="product-card__wishlist" aria-label="Agregar a favoritos">♡</button>
+                        <div class="product-card__quick-actions">
+                            <button class="product-card__add-cart" data-name="Bolso Tejido Artesanal" data-price="52.00"
+                                data-img="https://images.unsplash.com/photo-1594040226829-7f251ab46d80?w=100&h=100&fit=crop">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Tejidos</span>
+                        <h3 class="product-card__name">Bolso Tejido Artesanal</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__reviews">(28)</span>
+                        </div>
+                        <div class="product-card__price">
+                            <span class="product-card__price-current">$52.00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto 7 -->
+                <article class="product-card fade-in" data-category="velas">
+                    <div class="product-card__image">
+                        <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=500&h=500&fit=crop"
+                            alt="Vela de soja artesanal" loading="lazy">
+                        <span class="product-card__badge product-card__badge--new">Nuevo</span>
+                        <button class="product-card__wishlist" aria-label="Agregar a favoritos">♡</button>
+                        <div class="product-card__quick-actions">
+                            <button class="product-card__add-cart" data-name="Vela de Soja Lavanda" data-price="22.00"
+                                data-img="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=100&h=100&fit=crop">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Velas</span>
+                        <h3 class="product-card__name">Vela de Soja Lavanda</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__reviews">(36)</span>
+                        </div>
+                        <div class="product-card__price">
+                            <span class="product-card__price-current">$22.00</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto 8 -->
+                <article class="product-card fade-in" data-category="decoracion">
+                    <div class="product-card__image">
+                        <img src="https://images.unsplash.com/photo-1596162955779-9c8f7b43f0a0?w=500&h=500&fit=crop"
+                            alt="Cesta decorativa de mimbre" loading="lazy">
+                        <button class="product-card__wishlist" aria-label="Agregar a favoritos">♡</button>
+                        <div class="product-card__quick-actions">
+                            <button class="product-card__add-cart" data-name="Cesta Mimbre Natural" data-price="28.00"
+                                data-img="https://images.unsplash.com/photo-1596162955779-9c8f7b43f0a0?w=100&h=100&fit=crop">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Decoración</span>
+                        <h3 class="product-card__name">Cesta Mimbre Natural</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★☆</span>
+                            <span class="product-card__reviews">(19)</span>
+                        </div>
+                        <div class="product-card__price">
+                            <span class="product-card__price-current">$28.00</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="products__cta fade-in">
+                <a href="#" class="btn btn--primary btn--lg">Ver Todos los Productos →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROMO BANNER ==================== -->
+    <section class="promo section">
+        <div class="container">
+            <div class="promo__banner fade-in">
+                <div class="promo__content">
+                    <span class="promo__tag">🎉 Oferta Especial</span>
+                    <h2 class="promo__title">10% OFF en tu primera compra</h2>
+                    <p class="promo__description">
+                        Regístrate y recibe un cupón exclusivo. ¡No te lo pierdas!
+                    </p>
+                    <form class="promo__form" id="promoForm">
+                        <input type="email" placeholder="Tu correo electrónico" required
+                            aria-label="Correo electrónico para cupón">
+                        <button type="submit" class="btn btn--primary">Obtener Cupón</button>
+                    </form>
+                </div>
+                <div class="promo__decoration">✦</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SOBRE NOSOTROS ==================== -->
+    <section class="about section" id="nosotros">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__image fade-in">
+                    <img src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=700&h=800&fit=crop"
+                        alt="Artesana trabajando en cerámica" loading="lazy">
+                    <div class="about__image-badge">
+                        <span class="about__image-badge-number">15+</span>
+                        <span class="about__image-badge-text">Años de experiencia</span>
+                    </div>
+                </div>
+                <div class="about__content fade-in">
+                    <span class="section-header__tag">Nuestra Historia</span>
+                    <h2 class="section-header__title about__title">
+                        Tradición que se siente<br>
+                        <span class="hero__title-accent">en cada pieza</span>
+                    </h2>
+                    <p class="about__text">
+                        <strong>Artesanías Alma Viva</strong> nació del sueño de preservar las técnicas
+                        artesanales que nuestras abuelas nos enseñaron. Cada pieza que creamos lleva
+                        consigo horas de dedicación, amor por los detalles y un profundo respeto por
+                        los materiales naturales.
+                    </p>
+                    <p class="about__text">
+                        Trabajamos con artesanos locales de diferentes comunidades, apoyando el comercio
+                        justo y promoviendo la sostenibilidad. Nuestro compromiso es ofrecerte piezas
+                        únicas que llenen de calidez y personalidad cada rincón de tu hogar.
+                    </p>
+
+                    <div class="about__stats">
+                        <div class="about__stat">
+                            <span class="about__stat-number">500+</span>
+                            <span class="about__stat-label">Piezas creadas</span>
+                        </div>
+                        <div class="about__stat">
+                            <span class="about__stat-number">30+</span>
+                            <span class="about__stat-label">Artesanos</span>
+                        </div>
+                        <div class="about__stat">
+                            <span class="about__stat-number">2.5K+</span>
+                            <span class="about__stat-label">Clientes felices</span>
+                        </div>
+                    </div>
+
+                    <a href="#contacto" class="btn btn--primary btn--lg">Conoce Nuestro Proceso</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BENEFICIOS ==================== -->
+    <section class="benefits section">
+        <div class="container">
+            <div class="benefits__grid">
+                <div class="benefit-card fade-in">
+                    <div class="benefit-card__icon">🚚</div>
+                    <h3 class="benefit-card__title">Envíos a Todo el País</h3>
+                    <p class="benefit-card__text">Entregas seguras y rastreables. Envío gratis en compras mayores a $50.
+                    </p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-card__icon">✨</div>
+                    <h3 class="benefit-card__title">Productos Únicos</h3>
+                    <p class="benefit-card__text">Cada pieza es irrepetible. No encontrarás dos iguales en nuestra
+                        tienda.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-card__icon">🤲</div>
+                    <h3 class="benefit-card__title">Hecho a Mano</h3>
+                    <p class="benefit-card__text">Elaborado artesanalmente con técnicas tradicionales y materiales
+                        naturales.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-card__icon">💬</div>
+                    <h3 class="benefit-card__title">Atención Personalizada</h3>
+                    <p class="benefit-card__text">Te asesoramos en cada paso. Estamos disponibles por WhatsApp y email.
+                    </p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-card__icon">🔒</div>
+                    <h3 class="benefit-card__title">Pagos Seguros</h3>
+                    <p class="benefit-card__text">Múltiples métodos de pago con encriptación SSL para tu tranquilidad.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIOS ==================== -->
+    <section class="testimonials section" id="testimonios">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-header__tag">Opiniones</span>
+                <h2 class="section-header__title">Lo que Dicen Nuestros Clientes</h2>
+                <p class="section-header__description">
+                    Miles de clientes satisfechos avalan nuestra calidad
+                </p>
+            </div>
+
+            <div class="testimonials__slider fade-in">
+                <div class="testimonials__track" id="testimonialsTrack">
+                    <!-- Testimonio 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__text">
+                            "Las piezas de cerámica son absolutamente hermosas. Se nota el cariño y la
+                            dedicación en cada detalle. ¡Ya llevo 4 compras y cada vez me enamoro más!"
+                        </p>
+                        <div class="testimonial-card__author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face"
+                                alt="María García" loading="lazy">
+                            <div>
+                                <strong>María García</strong>
+                                <span>Ciudad de México</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonio 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__text">
+                            "Compré un set de velas y la manta tejida como regalo. La calidad superó mis
+                            expectativas y el empaque fue precioso. Definitivamente mi tienda favorita."
+                        </p>
+                        <div class="testimonial-card__author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
+                                alt="Carlos Rodríguez" loading="lazy">
+                            <div>
+                                <strong>Carlos Rodríguez</strong>
+                                <span>Guadalajara</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonio 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__text">
+                            "Pedí un set personalizado para el baby shower de mi hija y quedó espectacular.
+                            La atención por WhatsApp fue rápida y muy amable. ¡100% recomendado!"
+                        </p>
+                        <div class="testimonial-card__author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face"
+                                alt="Ana Martínez" loading="lazy">
+                            <div>
+                                <strong>Ana Martínez</strong>
+                                <span>Monterrey</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonio 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__text">
+                            "Las tazas rústicas son mi parte favorita de mi rutina matutina. Cada una tiene
+                            su personalidad. El envío llegó perfecto y antes de lo esperado."
+                        </p>
+                        <div class="testimonial-card__author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face"
+                                alt="Diego López" loading="lazy">
+                            <div>
+                                <strong>Diego López</strong>
+                                <span>Buenos Aires</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles slider -->
+                <div class="testimonials__controls">
+                    <button class="testimonials__btn testimonials__btn--prev" id="prevBtn"
+                        aria-label="Testimonio anterior">←</button>
+                    <button class="testimonials__btn testimonials__btn--next" id="nextBtn"
+                        aria-label="Testimonio siguiente">→</button>
+                </div>
+
+                <!-- Indicadores -->
+                <div class="testimonials__dots" id="testimonialsDots">
+                    <span class="testimonials__dot active" data-index="0"></span>
+                    <span class="testimonials__dot" data-index="1"></span>
+                    <span class="testimonials__dot" data-index="2"></span>
+                    <span class="testimonials__dot" data-index="3"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACTO ==================== -->
+    <section class="contact section" id="contacto">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-header__tag">Escríbenos</span>
+                <h2 class="section-header__title">Contáctanos</h2>
+                <p class="section-header__description">
+                    ¿Tienes alguna pregunta o pedido especial? Estamos aquí para ayudarte
+                </p>
+            </div>
+
+            <div class="contact__grid">
+                <!-- Formulario -->
+                <div class="contact__form-wrapper fade-in">
+                    <form class="contact__form" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nombre completo *</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre"
+                                required>
+                            <span class="form-error" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com"
+                                required>
+                            <span class="form-error" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Asunto</label>
+                            <select id="subject" name="subject" class="form-input form-select">
+                                <option value="">Selecciona un tema</option>
+                                <option value="consulta">Consulta general</option>
+                                <option value="pedido">Pedido personalizado</option>
+                                <option value="devolucion">Devoluciones</option>
+                                <option value="colaboracion">Colaboraciones</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensaje *</label>
+                            <textarea id="message" name="message" class="form-input form-textarea"
+                                placeholder="Cuéntanos cómo podemos ayudarte..." rows="5" required></textarea>
+                            <span class="form-error" id="messageError"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--full btn--lg">
+                            Enviar Mensaje ✉️
+                        </button>
+                    </form>
+
+                    <div class="contact__success" id="contactSuccess" style="display: none;">
+                        <span class="contact__success-icon">✅</span>
+                        <h3>¡Mensaje enviado!</h3>
+                        <p>Te responderemos en menos de 24 horas.</p>
+                    </div>
+                </div>
+
+                <!-- Info contacto -->
+                <div class="contact__info fade-in">
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">📍</div>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">📞</div>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">🕐</div>
+                        <div>
+                            <h4>Horario</h4>
+                            <p>Lun - Sáb: 9:00 - 19:00<br>Dom: 10:00 - 15:00</p>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <a href=""
+                        target="_blank" rel="noopener noreferrer" class="contact__whatsapp">
+                        <span class="contact__whatsapp-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </span>
+                        <div>
+                            <strong>Escríbenos por WhatsApp</strong>
+                            <span>Respuesta inmediata</span>
+                        </div>
+                    </a>
+
+                    <!-- Redes sociales -->
+                    <div class="contact__social">
+                        <h4>Síguenos</h4>
+                        <div class="contact__social-links">
+                            <a href="#" class="contact__social-link" aria-label="Instagram" target="_blank"
+                                rel="noopener noreferrer">📸 Instagram</a>
+                            <a href="#" class="contact__social-link" aria-label="Facebook" target="_blank"
+                                rel="noopener noreferrer">👍 Facebook</a>
+                            <a href="#" class="contact__social-link" aria-label="Pinterest" target="_blank"
+                                rel="noopener noreferrer">📌 Pinterest</a>
+                            <a href="#" class="contact__social-link" aria-label="TikTok" target="_blank"
+                                rel="noopener noreferrer">🎵 TikTok</a>
+                        </div>
+                    </div>
+
+                    <!-- Mapa -->
+                    <div class="contact__map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52339.11764705882!2d-56.214!3d-34.9011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81ff0f6f3b6d%3A0x4a3d6d9b3d7b5f0!2sMontevideo%2C%20Uruguay!5e0!3m2!1ses!2suy!4v1700000000000"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                            title="Ubicación de Artesanías Alma Viva">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NEWSLETTER ==================== -->
+    <section class="newsletter section">
+        <div class="container">
+            <div class="newsletter__box fade-in">
+                <h2 class="newsletter__title">Únete a nuestra comunidad</h2>
+                <p class="newsletter__text">Recibe novedades, ofertas exclusivas y tips de decoración directo a tu
+                    correo.</p>
+                <form class="newsletter__form" id="newsletterForm">
+                    <input type="email" placeholder="Tu correo electrónico" required
+                        aria-label="Suscribirse al newsletter">
+                    <button type="submit" class="btn btn--primary">Suscribirme</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <!-- Columna 1: Marca -->
+                <div class="footer__col">
+                    <a href="#" class="footer__logo">
+                        <span class="footer__logo-icon">🏺</span>
+                        <span>Alma Viva</span>
+                    </a>
+                    <p class="footer__description">
+                        Artesanías únicas hechas a mano con amor, tradición y los mejores materiales naturales.
+                        Cada pieza cuenta una historia.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
+                        <a href="#" class="footer__social-link" aria-label="Facebook">👍</a>
+                        <a href="#" class="footer__social-link" aria-label="Pinterest">📌</a>
+                        <a href="#" class="footer__social-link" aria-label="TikTok">🎵</a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Enlaces rápidos -->
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Tienda</h4>
+                    <ul class="footer__links">
+                        <li><a href="#productos">Productos Destacados</a></li>
+                        <li><a href="#categorias">Categorías</a></li>
+                        <li><a href="#">Novedades</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                        <li><a href="#">Tarjetas de Regalo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Información -->
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Información</h4>
+                    <ul class="footer__links">
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Trabaja con Nosotros</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Políticas -->
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Políticas</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">Envíos y Entregas</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Aviso Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Métodos de pago -->
+            <div class="footer__payments">
+                <span>Métodos de pago aceptados:</span>
+                <div class="footer__payment-icons">
+                    <span class="payment-icon" title="Visa">💳 Visa</span>
+                    <span class="payment-icon" title="Mastercard">💳 MC</span>
+                    <span class="payment-icon" title="PayPal">🅿️ PayPal</span>
+                    <span class="payment-icon" title="Transferencia">🏦 Transf.</span>
+                    <span class="payment-icon" title="Efectivo">💵 Efectivo</span>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer__bottom">
+                <p>© 2026 Artesanías Alma Viva. Todos los derechos reservados.</p>
+                <p>Hecho con ❤️ en México</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== BOTÓN VOLVER ARRIBA ==================== -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</button>
+
+    <!-- ==================== WHATSAPP FLOTANTE ==================== -->
+    <a href="" class="whatsapp-float"
+        target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <span class="contact__whatsapp-icon">
+            <i class="fab fa-whatsapp"></i>
+        </span>
+    </a>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

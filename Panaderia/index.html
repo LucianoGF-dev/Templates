@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Panadería artesanal con productos frescos todos los días. Pan, facturas, tortas, empanadas y más. Hacé tu pedido por WhatsApp.">
+    <meta name="keywords"
+        content="panadería, pan artesanal, facturas, tortas, empanadas, pan fresco, delivery panadería">
+    <meta name="author" content="La Dorada Panadería">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="La Dorada Panadería | Pan Artesanal Fresco Todos los Días">
+    <meta property="og:description"
+        content="Descubrí el sabor del pan recién hecho. Productos artesanales, ingredientes de calidad y atención cercana.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ladoradapanaderia.com">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200">
+    <meta property="og:locale" content="es_AR">
+
+    <title>La Dorada Panadería | Pan Artesanal Fresco Todos los Días</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍞</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============ LOADER ============ -->
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-bread">🍞</div>
+            <div class="loader-text">La Dorada</div>
+            <div class="loader-subtitle">Preparando algo delicioso...</div>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ FLOATING WHATSAPP ============ -->
+    <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20hacer%20un%20pedido" class="whatsapp-float"
+        target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" width="32" height="32">
+            <path fill="currentColor"
+                d="M16.004 0C7.165 0 .003 7.16.003 15.997c0 2.811.736 5.554 2.127 7.963L.014 32l8.203-2.07a16.01 16.01 0 007.787 1.97h.004C24.84 31.9 32 24.738 32 15.997 32 7.16 24.84 0 16.004 0zm0 29.13a13.23 13.23 0 01-6.87-1.91l-.494-.295-5.12 1.297 1.367-4.99-.324-.514A13.13 13.13 0 012.77 15.997c0-7.298 5.937-13.23 13.234-13.23 7.295 0 13.227 5.932 13.23 13.23 0 7.298-5.935 13.133-13.23 13.133zm7.244-9.878c-.398-.2-2.348-1.158-2.715-1.293-.367-.134-.634-.2-.9.2-.268.398-1.034 1.293-1.268 1.56-.234.268-.468.3-.866.1-.398-.2-1.678-.618-3.197-1.965-1.18-1.053-1.978-2.356-2.212-2.754-.234-.398-.025-.613.176-.812.179-.179.398-.468.597-.698.2-.23.268-.398.4-.665.134-.268.067-.5-.033-.698-.1-.2-.9-2.17-1.234-2.968-.325-.78-.656-.674-.9-.686l-.766-.013c-.268 0-.698.1-1.066.5-.368.398-1.4 1.37-1.4 3.34 0 1.97 1.434 3.876 1.634 4.144.2.268 2.82 4.31 6.838 6.036.957.413 1.704.66 2.288.845.96.305 1.834.262 2.526.159.772-.115 2.348-.958 2.683-1.888.334-.93.334-1.727.234-1.888-.1-.16-.368-.268-.766-.468z" />
+        </svg>
+        <span class="whatsapp-tooltip">¡Hacé tu pedido!</span>
+    </a>
+
+    <!-- ============ BACK TO TOP ============ -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-icon">🌾</span>
+                <span class="logo-text">La <span class="logo-highlight">Dorada</span></span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link active">Inicio</a></li>
+                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="#productos" class="nav-link">Productos</a></li>
+                <li><a href="#promociones" class="nav-link">Promos</a></li>
+                <li><a href="#galeria" class="nav-link">Galería</a></li>
+                <li><a href="#testimonios" class="nav-link">Opiniones</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+
+            <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20hacer%20un%20pedido" class="nav-cta"
+                target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Pedir Ahora
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1920&q=80"
+                alt="Pan artesanal recién horneado" loading="eager">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-particles" id="heroParticles"></div>
+
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+            <div class="hero-badge" data-aos="fade-down" data-aos-delay="200">
+                <span>✨</span> Desde 1998 horneando con amor
+            </div>
+            <h1 class="hero-title">
+                El sabor del <span class="text-gradient">pan recién hecho</span>, todos los días
+            </h1>
+            <p class="hero-subtitle">
+                Pan artesanal, facturas, tortas y mucho más. Elaborados con ingredientes
+                premium y la tradición de tres generaciones.
+            </p>
+            <div class="hero-buttons">
+                <a href="#productos" class="btn btn-primary">
+                    <span>Ver Productos</span>
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20hacer%20un%20pedido" class="btn btn-whatsapp"
+                    target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    <span>Hacer Pedido</span>
+                </a>
+            </div>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+                <div class="hero-stat">
+                    <span class="stat-number" data-count="28">0</span>
+                    <span class="stat-label">Años de experiencia</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-number" data-count="50000">0</span>
+                    <span class="stat-label">Clientes felices</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-number" data-count="120">0</span>
+                    <span class="stat-label">Productos artesanales</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <a href="#nosotros">
+                <span>Descubrí más</span>
+                <div class="scroll-indicator">
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="about-img-main">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038024a?w=600&q=80"
+                            alt="Panadero artesanal preparando masa" loading="lazy">
+                        <div class="about-img-badge">
+                            <span class="badge-number">28+</span>
+                            <span class="badge-text">Años de tradición</span>
+                        </div>
+                    </div>
+                    <div class="about-img-secondary">
+                        <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=400&q=80"
+                            alt="Pan fresco recién salido del horno" loading="lazy">
+                    </div>
+                    <div class="about-pattern"></div>
+                </div>
+
+                <div class="about-content" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="section-badge">
+                        <span>🏠</span> Nuestra Historia
+                    </div>
+                    <h2 class="section-title">
+                        Tres generaciones <br>
+                        <span class="text-gradient">horneando con pasión</span>
+                    </h2>
+                    <p class="about-text">
+                        Desde 1998, <strong>La Dorada</strong> nació como un sueño familiar: llevar a cada mesa
+                        el auténtico sabor del pan artesanal. Lo que comenzó como un pequeño horno de barrio
+                        se convirtió en el corazón gastronómico de nuestra comunidad.
+                    </p>
+                    <p class="about-text">
+                        Cada mañana, antes de que salga el sol, nuestros maestros panaderos comienzan a
+                        amasar con los <strong>mejores ingredientes</strong>, sin conservantes ni aditivos.
+                        Porque creemos que lo bueno se nota en cada mordida.
+                    </p>
+
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon">🌾</div>
+                            <div class="feature-info">
+                                <h4>Ingredientes Premium</h4>
+                                <p>Harinas seleccionadas y materia prima de primera calidad</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">👨‍🍳</div>
+                            <div class="feature-info">
+                                <h4>Recetas de Familia</h4>
+                                <p>Tradición transmitida de abuelos a nietos</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">🕐</div>
+                            <div class="feature-info">
+                                <h4>Producción Diaria</h4>
+                                <p>Pan fresco todos los días, sin excepciones</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">💛</div>
+                            <div class="feature-info">
+                                <h4>Atención Cercana</h4>
+                                <p>Te atendemos como si fueras parte de la familia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PRODUCTS SECTION ============ -->
+    <section class="products" id="productos">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <span>🥐</span> Nuestros Productos
+                </div>
+                <h2 class="section-title">
+                    Elaborados con <span class="text-gradient">amor y tradición</span>
+                </h2>
+                <p class="section-subtitle">
+                    Cada producto es preparado artesanalmente con ingredientes frescos
+                    y el cariño de siempre.
+                </p>
+            </div>
+
+            <div class="products-filter" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="panes">Panes</button>
+                <button class="filter-btn" data-filter="dulces">Dulces</button>
+                <button class="filter-btn" data-filter="salados">Salados</button>
+                <button class="filter-btn" data-filter="bebidas">Bebidas</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Pan Casero -->
+                <div class="product-card" data-category="panes" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=500&q=80"
+                            alt="Pan casero artesanal" loading="lazy">
+                        <div class="product-badge badge-fresh">Fresco</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pan Casero</h3>
+                        <p>Crujiente por fuera, tierno por dentro. Elaborado con masa madre natural.</p>
+                        <div class="product-footer">
+                            <span class="product-price">Desde $2.500</span>
+                            <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20pedir%20Pan%20Casero"
+                                class="product-btn" target="_blank" rel="noopener noreferrer">Pedir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bizcochos -->
+                <div class="product-card" data-category="dulces" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500&q=80"
+                            alt="Bizcochos artesanales" loading="lazy">
+                        <div class="product-badge badge-popular">Popular</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Bizcochos</h3>
+                        <p>Bizcochos dulces y salados, perfectos para acompañar tu mate o café.</p>
+                        <div class="product-footer">
+                            <span class="product-price">Desde $1.800</span>
+                            <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20pedir%20Bizcochos"
+                                class="product-btn" target="_blank" rel="noopener noreferrer">Pedir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Facturas -->
+                <div class="product-card" data-category="dulces" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038024a?w=500&q=80"
+                            alt="Facturas argentinas" loading="lazy">
+                        <div class="product-badge badge-best">⭐ Más Vendido</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Facturas</h3>
+                        <p>Medialunas, vigilantes, cañoncitos y más. El desayuno perfecto.</p>
+                        <div class="product-footer">
+                            <span class="product-price">Desde $1.200 c/u</span>
+                            <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20pedir%20Facturas"
+                                class="product-btn" target="_blank" rel="noopener noreferrer">Pedir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tortas -->
+                <div class="product-card" data-category="dulces" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&q=80"
+                            alt="Torta artesanal" loading="lazy">
+                        <div class="product-badge badge-new">Nuevo</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tortas</h3>
+                        <p>Selva negra, chocotorta, red velvet y sabores personalizados por encargo.</p>
+                        <div class="product-footer">
+                            <span class="product-price">Desde $12.000</span>
+                            <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20pedir%20una%20Torta"
+                                class="product-btn" target="_blank" rel="noopener noreferrer">Pedir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alfajores -->
+                <div class="product-card" data-category="dulces" data-aos="fade-up" data-aos-delay="500">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=500&q=80"
+                            alt="Alfajores artesanales" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Alfajores</h3>
+                        <p>De maicena, chocolate, dulce de leche. Receta secreta de la abuela.</p>
+                        <div class="product-footer">
+                            <span class="product-price">Desde $1.500 c/u</span>
+                            <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20pedir%20Alfajores"
+                                class="product-btn" target="_blank" rel="noopener noreferrer">Pedir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Masas Finas -->
+                <div class="product-card" data-category="dulces" data-aos="fade-up" data-aos-delay="600">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1486427944544-d2c246c4df4d?w=500&q=80"
+                            alt="Masas finas para eventos" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Masas Finas</h3>
+                        <p>Ideales para eventos y reuniones. Variedad de sabores y presentaciones.</p>
+                        <div class="product-footer">
+                            <span class="product-price">Docena desde $8.000</span>
+                            <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20pedir%20Masas%20Finas"
+                                class="product-btn" target="_blank" rel="noopener noreferrer">Pedir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sándwiches -->
+                <div class="product-card" data-category="salados" data-aos="fade-up" data-aos-delay="700">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?w=500&q=80"
+                            alt="Sándwiches gourmet" loading="lazy">
+                        <div class="product-badge badge-fresh">Fresco</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Sándwiches</h3>
+                        <p>De miga, triple, vegetarianos. Perfectos para picadas y eventos.</p>
+                        <div class="product-footer">
+                            <span class="product-price">Desde $1.800 c/u</span>
+                            <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20pedir%20Sándwiches"
+                                class="product-btn" target="_blank" rel="noopener noreferrer">Pedir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Empanadas -->
+                <div class="product-card" data-category="salados" data-aos="fade-up" data-aos-delay="800">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1604467707321-70d009801bf8?w=500&q=80"
+                            alt="Empanadas criollas" loading="lazy">
+                        <div class="product-badge badge-popular">Popular</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Empanadas</h3>
+                        <p>Carne, jamón y queso, humita, pollo. Horneadas al momento.</p>
+                        <div class="product-footer">
+                            <span class="product-price">Docena desde $9.000</span>
+                            <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20pedir%20Empanadas"
+                                class="product-btn" target="_blank" rel="noopener noreferrer">Pedir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tartas -->
+                <div class="product-card" data-category="salados" data-aos="fade-up" data-aos-delay="900">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=500&q=80"
+                            alt="Tartas saladas" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Tartas</h3>
+                        <p>Jamón y queso, verdura, pollo. Masa casera crujiente y relleno generoso.</p>
+                        <div class="product-footer">
+                            <span class="product-price">Desde $5.500</span>
+                            <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20pedir%20una%20Tarta"
+                                class="product-btn" target="_blank" rel="noopener noreferrer">Pedir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Café y Bebidas -->
+                <div class="product-card" data-category="bebidas" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&q=80"
+                            alt="Café de especialidad" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Café & Bebidas</h3>
+                        <p>Café de especialidad, té, chocolate caliente y jugos naturales.</p>
+                        <div class="product-footer">
+                            <span class="product-price">Desde $2.000</span>
+                            <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20consultar%20por%20Bebidas"
+                                class="product-btn" target="_blank" rel="noopener noreferrer">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROMOTIONS SECTION ============ -->
+    <section class="promos" id="promociones">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <span>🔥</span> Ofertas Especiales
+                </div>
+                <h2 class="section-title">
+                    Promociones que <span class="text-gradient">endulzan tu día</span>
+                </h2>
+                <p class="section-subtitle">
+                    Aprovechá nuestras ofertas semanales y disfrutá más por menos.
+                </p>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="promo-timer" data-aos="fade-up" data-aos-delay="100">
+                <div class="timer-label">⏰ Oferta termina en:</div>
+                <div class="timer-display" id="promoTimer">
+                    <div class="timer-unit">
+                        <span class="timer-number" id="timerHours">00</span>
+                        <span class="timer-text">Horas</span>
+                    </div>
+                    <span class="timer-separator">:</span>
+                    <div class="timer-unit">
+                        <span class="timer-number" id="timerMinutes">00</span>
+                        <span class="timer-text">Minutos</span>
+                    </div>
+                    <span class="timer-separator">:</span>
+                    <div class="timer-unit">
+                        <span class="timer-number" id="timerSeconds">00</span>
+                        <span class="timer-text">Segundos</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="promos-grid">
+                <div class="promo-card promo-featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="promo-badge-discount">-30%</div>
+                    <div class="promo-image">
+                        <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&q=80"
+                            alt="Desayuno completo" loading="lazy">
+                    </div>
+                    <div class="promo-content">
+                        <h3>Desayuno Completo</h3>
+                        <p>6 medialunas + café con leche + jugo natural para 2 personas</p>
+                        <div class="promo-pricing">
+                            <span class="promo-old-price">$8.500</span>
+                            <span class="promo-new-price">$5.950</span>
+                        </div>
+                        <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20el%20Desayuno%20Completo%20en%20promo"
+                            class="btn btn-primary btn-full" target="_blank" rel="noopener noreferrer">
+                            ¡Lo quiero! 🛒
+                        </a>
+                    </div>
+                </div>
+
+                <div class="promo-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="promo-badge-discount">-25%</div>
+                    <div class="promo-image">
+                        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&q=80"
+                            alt="Docena de facturas" loading="lazy">
+                    </div>
+                    <div class="promo-content">
+                        <h3>Docena de Facturas</h3>
+                        <p>12 unidades surtidas: medialunas, cañoncitos, pasta frola y más</p>
+                        <div class="promo-pricing">
+                            <span class="promo-old-price">$14.400</span>
+                            <span class="promo-new-price">$10.800</span>
+                        </div>
+                        <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20la%20Docena%20de%20Facturas%20en%20promo"
+                            class="btn btn-primary btn-full" target="_blank" rel="noopener noreferrer">
+                            ¡Lo quiero! 🛒
+                        </a>
+                    </div>
+                </div>
+
+                <div class="promo-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="promo-badge-discount">-20%</div>
+                    <div class="promo-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80"
+                            alt="Combo merienda" loading="lazy">
+                    </div>
+                    <div class="promo-content">
+                        <h3>Combo Merienda</h3>
+                        <p>Torta personalizada (2kg) + 6 alfajores + café premium</p>
+                        <div class="promo-pricing">
+                            <span class="promo-old-price">$18.000</span>
+                            <span class="promo-new-price">$14.400</span>
+                        </div>
+                        <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20el%20Combo%20Merienda%20en%20promo"
+                            class="btn btn-primary btn-full" target="_blank" rel="noopener noreferrer">
+                            ¡Lo quiero! 🛒
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="promo-offer-day" data-aos="fade-up" data-aos-delay="500">
+                <div class="offer-day-badge">🏷️ Oferta del Día</div>
+                <h3>Hoy: <span>Pan de Campo Grande + Manteca</span> por solo <span class="highlight-price">$3.200</span>
+                </h3>
+                <p>¡Válido solo por hoy! Consultá disponibilidad por WhatsApp.</p>
+                <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20la%20oferta%20del%20día"
+                    class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    Reservar Ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section class="why-us" id="elegirnos">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <span>💎</span> ¿Por Qué Elegirnos?
+                </div>
+                <h2 class="section-title">
+                    Lo que nos hace <span class="text-gradient">diferentes</span>
+                </h2>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-icon">🌾</div>
+                    <h3>Ingredientes Frescos</h3>
+                    <p>Seleccionamos los mejores ingredientes cada día para garantizar sabor y calidad.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-icon">⚡</div>
+                    <h3>Atención Rápida</h3>
+                    <p>Tu pedido listo en minutos. Sabemos que tu tiempo vale.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-icon">🚚</div>
+                    <h3>Entrega Puntual</h3>
+                    <p>Delivery en menos de 45 minutos a toda la zona. Siempre a tiempo.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="why-icon">🏆</div>
+                    <h3>28+ Años de Experiencia</h3>
+                    <p>Casi tres décadas perfeccionando recetas y mejorando cada día.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="why-icon">✅</div>
+                    <h3>Calidad Garantizada</h3>
+                    <p>Si no estás conforme, lo solucionamos. Tu satisfacción es nuestra prioridad.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="why-icon">🧼</div>
+                    <h3>Higiene Certificada</h3>
+                    <p>Cumplimos con todas las normas sanitarias. Tu salud es lo primero.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ GALLERY SECTION ============ -->
+    <section class="gallery" id="galeria">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <span>📸</span> Nuestra Galería
+                </div>
+                <h2 class="section-title">
+                    Un vistazo a <span class="text-gradient">nuestro mundo</span>
+                </h2>
+                <p class="section-subtitle">
+                    Fotos reales de nuestro local, productos y el cariño de nuestros clientes.
+                </p>
+            </div>
+
+            <div class="gallery-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="gallery-item gallery-large" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80"
+                        alt="Variedad de panes artesanales" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🔍</span>
+                        <span class="gallery-caption">Nuestros Panes</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038024a?w=500&q=80"
+                        alt="Interior de la panadería" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🔍</span>
+                        <span class="gallery-caption">Nuestro Local</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=500&q=80"
+                        alt="Pan recién horneado" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🔍</span>
+                        <span class="gallery-caption">Recién Salido del Horno</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&q=80"
+                        alt="Torta decorada" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🔍</span>
+                        <span class="gallery-caption">Tortas Personalizadas</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-wide" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=800&q=80"
+                        alt="Elaboración artesanal" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🔍</span>
+                        <span class="gallery-caption">Elaboración Artesanal</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&q=80"
+                        alt="Café de especialidad" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🔍</span>
+                        <span class="gallery-caption">Café Premium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <button class="lightbox-prev" aria-label="Anterior">&#10094;</button>
+        <button class="lightbox-next" aria-label="Siguiente">&#10095;</button>
+        <img src="" alt="Imagen ampliada" class="lightbox-img">
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <!-- ============ TESTIMONIALS SECTION ============ -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <span>💬</span> Opiniones de Clientes
+                </div>
+                <h2 class="section-title">
+                    Lo que dicen <span class="text-gradient">nuestros clientes</span>
+                </h2>
+                <p class="section-subtitle">
+                    Miles de familias confían en nosotros cada día. Estas son sus experiencias.
+                </p>
+            </div>
+
+            <div class="testimonials-slider" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "El mejor pan de la zona, sin dudas. Las medialunas son increíbles y la atención
+                            es de primera. Mi familia compra acá hace 10 años y nunca nos fallaron."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MC</div>
+                            <div class="author-info">
+                                <h4>María Carmen López</h4>
+                                <span>Cliente desde 2014</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "Pedí una torta para el cumpleaños de mi hija y quedó espectacular.
+                            El sabor, la decoración, todo perfecto. ¡Gracias La Dorada!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RG</div>
+                            <div class="author-info">
+                                <h4>Roberto García</h4>
+                                <span>Cliente desde 2019</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "Todo fresco y delicioso. Las empanadas son las mejores que probé en mi vida.
+                            El delivery siempre llega rápido y caliente. ¡100% recomendado!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">LP</div>
+                            <div class="author-info">
+                                <h4>Laura Pérez</h4>
+                                <span>Cliente desde 2020</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "Desde que descubrí La Dorada no compro pan en otro lado. La calidad se nota
+                            en cada producto. Las facturas del domingo son un ritual familiar."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JM</div>
+                            <div class="author-info">
+                                <h4>Juan Martín Rodríguez</h4>
+                                <span>Cliente desde 2016</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "Excelente calidad en masas finas para eventos. Pedí para el casamiento de mi
+                            hermana y todos los invitados quedaron encantados. ¡Volveremos!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AF</div>
+                            <div class="author-info">
+                                <h4>Ana Fernández</h4>
+                                <span>Cliente desde 2018</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-controls">
+                    <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Anterior">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="slider-dots" id="sliderDots"></div>
+                    <button class="slider-btn slider-next" id="sliderNext" aria-label="Siguiente">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ DELIVERY SECTION ============ -->
+    <section class="delivery" id="pedidos">
+        <div class="container">
+            <div class="delivery-wrapper" data-aos="fade-up">
+                <div class="delivery-content">
+                    <div class="section-badge">
+                        <span>🚚</span> Pedidos & Delivery
+                    </div>
+                    <h2 class="section-title">
+                        Tu pedido <span class="text-gradient">llega a tu puerta</span>
+                    </h2>
+                    <p>
+                        Hacé tu pedido por WhatsApp y recibilos en la comodidad de tu hogar.
+                        ¡Rápido, fresco y con todo el sabor de siempre!
+                    </p>
+
+                    <div class="delivery-steps">
+                        <div class="delivery-step">
+                            <div class="step-number">1</div>
+                            <div class="step-info">
+                                <h4>Escribinos</h4>
+                                <p>Contactanos por WhatsApp con tu pedido</p>
+                            </div>
+                        </div>
+                        <div class="delivery-step">
+                            <div class="step-number">2</div>
+                            <div class="step-info">
+                                <h4>Confirmamos</h4>
+                                <p>Te confirmamos disponibilidad y horario</p>
+                            </div>
+                        </div>
+                        <div class="delivery-step">
+                            <div class="step-number">3</div>
+                            <div class="step-info">
+                                <h4>Recibí</h4>
+                                <p>Entrega en 30-45 minutos en tu zona</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="delivery-info-grid">
+                        <div class="delivery-info-item">
+                            <span class="info-icon">🕐</span>
+                            <div>
+                                <h4>Horarios de Delivery</h4>
+                                <p>Lunes a Sábado: 7:00 - 21:00<br>Domingos: 8:00 - 14:00</p>
+                            </div>
+                        </div>
+                        <div class="delivery-info-item">
+                            <span class="info-icon">📍</span>
+                            <div>
+                                <h4>Zona de Reparto</h4>
+                                <p>Radio de 5km desde el local.<br>Consultá tu zona por WhatsApp.</p>
+                            </div>
+                        </div>
+                        <div class="delivery-info-item">
+                            <span class="info-icon">💳</span>
+                            <div>
+                                <h4>Medios de Pago</h4>
+                                <p>Efectivo, transferencia, Mercado Pago y tarjetas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20hacer%20un%20pedido%20con%20delivery"
+                        class="btn btn-whatsapp btn-large" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                        Pedir por WhatsApp
+                    </a>
+                </div>
+                <div class="delivery-visual">
+                    <div class="delivery-illustration">
+                        <div class="delivery-bike">🛵</div>
+                        <div class="delivery-bread-float">🍞</div>
+                        <div class="delivery-bread-float float-2">🥐</div>
+                        <div class="delivery-bread-float float-3">🥖</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FAQ SECTION ============ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <span>❓</span> Preguntas Frecuentes
+                </div>
+                <h2 class="section-title">
+                    Resolvé tus <span class="text-gradient">dudas</span>
+                </h2>
+            </div>
+
+            <div class="faq-list" data-aos="fade-up" data-aos-delay="200">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Hacen envíos a domicilio?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>¡Sí! Hacemos delivery en un radio de 5km desde nuestro local.
+                            El tiempo estimado de entrega es de 30 a 45 minutos.
+                            Escribinos por WhatsApp para confirmar si llegamos a tu zona.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Aceptan tarjetas de crédito y débito?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, aceptamos todas las tarjetas de crédito y débito, Mercado Pago,
+                            transferencia bancaria y efectivo. ¡El que te sea más cómodo!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Preparan tortas por encargo?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>¡Por supuesto! Hacemos tortas personalizadas para cumpleaños, aniversarios,
+                            eventos corporativos y cualquier ocasión. Consultanos por WhatsApp con
+                            tu idea y te armamos un presupuesto sin compromiso.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Abren los domingos?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, abrimos los domingos de 8:00 a 14:00 hs. Perfecto para tu desayuno
+                            o brunch dominical. Los feriados consultá nuestros horarios especiales por redes sociales.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Tienen opciones sin azúcar o sin TACC?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, tenemos una línea de productos sin azúcar agregada y opciones aptas para celíacos.
+                            Consultanos por WhatsApp y te enviamos el catálogo completo de estas opciones.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Puedo hacer pedidos para eventos?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>¡Claro que sí! Preparamos catering para cumpleaños, bodas, reuniones corporativas
+                            y cualquier evento. Ofrecemos bandejas de sándwiches de miga, masas finas,
+                            empanadas, tartas y más. Contactanos para un presupuesto personalizado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <span>📍</span> Contacto
+                </div>
+                <h2 class="section-title">
+                    Vení a <span class="text-gradient">visitarnos</span>
+                </h2>
+                <p class="section-subtitle">
+                    Estamos en el corazón del barrio. Te esperamos con pan fresco y una sonrisa.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-detail">
+                            <h4>Dirección</h4>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-detail">
+                            <h4>Teléfono</h4>
+                            <p><a href="tel:+5491112345678"></a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-detail">
+                            <h4>WhatsApp</h4>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-detail">
+                            <h4>Email</h4>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">🕐</div>
+                        <div class="contact-detail">
+                            <h4>Horarios</h4>
+                            <p>Lun - Vie: 6:00 - 21:00<br>Sábados: 7:00 - 21:00<br>Domingos: 8:00 - 14:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper" data-aos="fade-left" data-aos-delay="200">
+                    <h3>Envianos un mensaje</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+54 9 11 ...">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Seleccioná un asunto</option>
+                                <option value="pedido">Hacer un pedido</option>
+                                <option value="torta">Torta por encargo</option>
+                                <option value="evento">Catering para evento</option>
+                                <option value="consulta">Consulta general</option>
+                                <option value="reclamo">Reclamo o sugerencia</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="Contanos en qué podemos ayudarte..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Enviar Mensaje</span>
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Google Maps -->
+            <div class="contact-map" data-aos="fade-up" data-aos-delay="300">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52339.11764705882!2d-56.214!3d-34.9011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81ff0f6f3b6d%3A0x4a3d6d9b3d7b5f0!2sMontevideo%2C%20Uruguay!5e0!3m2!1ses!2suy!4v1700000000000"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="Ubicación de La Dorada Panadería">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#hero" class="footer-logo">
+                        <span class="logo-icon">🌾</span>
+                        <span class="logo-text">La <span class="logo-highlight">Dorada</span></span>
+                    </a>
+                    <p class="footer-desc">
+                        Panadería artesanal desde 1998. Tres generaciones horneando con amor,
+                        tradición y los mejores ingredientes para llevar a tu mesa
+                        el auténtico sabor del pan casero.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.82-.31-4.02-1.07-1.38-.88-2.32-2.36-2.61-3.94-.35-1.92-.04-3.92.84-5.65 1.03-2.03 2.87-3.56 5.04-4.13.73-.19 1.48-.28 2.23-.31.03 1.52.03 3.04.03 4.56-.73.07-1.46.28-2.1.65-.83.48-1.45 1.27-1.73 2.2-.32 1.07-.21 2.22.31 3.21.57 1.09 1.63 1.87 2.83 2.12.97.2 2.01.09 2.89-.32.83-.39 1.48-1.07 1.83-1.89.24-.56.35-1.17.35-1.78V.02h-2.66z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/5491112345678" class="social-link" aria-label="WhatsApp" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#promociones">Promociones</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#testimonios">Opiniones</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav">
+                    <h4>Productos</h4>
+                    <ul>
+                        <li><a href="#productos">Pan Casero</a></li>
+                        <li><a href="#productos">Facturas</a></li>
+                        <li><a href="#productos">Tortas</a></li>
+                        <li><a href="#productos">Empanadas</a></li>
+                        <li><a href="#productos">Masas Finas</a></li>
+                        <li><a href="#productos">Alfajores</a></li>
+                        <li><a href="#productos">Café & Bebidas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li>🕐 Lun-Vie: 6:00 - 21:00</li>
+                        <li>🕐 Sáb: 7:00 - 21:00</li>
+                        <li>🕐 Dom: 8:00 - 14:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 La Dorada Panadería. Todos los derechos reservados.</p>
+                <p>Hecho con ❤️ y mucho pan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ÉLAN — Tienda de ropa premium. Moda moderna, elegante y de calidad para hombre y mujer. Envíos a todo el país.">
+  <meta name="keywords" content="ropa, moda, tienda online, clothing, fashion, premium, hombre, mujer, accesorios">
+  <meta name="author" content="ÉLAN">
+  <meta property="og:title" content="ÉLAN — Moda Premium Online">
+  <meta property="og:description" content="Descubre nuestra colección exclusiva. Estilo, calidad y diseño en cada prenda.">
+  <meta property="og:type" content="website">
+  <title>ÉLAN — Moda Premium Online</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>É</text></svg>">
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header id="navbar" class="navbar" role="banner">
+    <div class="navbar__container">
+      <!-- Logo -->
+      <a href="#inicio" class="navbar__logo" aria-label="ÉLAN - Inicio">
+        <span class="logo__text">ÉLAN</span>
+      </a>
+
+      <!-- Menú de navegación -->
+      <nav class="navbar__menu" id="nav-menu" aria-label="Navegación principal">
+        <ul class="navbar__list">
+          <li><a href="#inicio" class="navbar__link active">Inicio</a></li>
+          <li><a href="#nosotros" class="navbar__link">Nosotros</a></li>
+          <li><a href="#productos" class="navbar__link">Productos</a></li>
+          <li><a href="#categorias" class="navbar__link">Categorías</a></li>
+          <li><a href="#promociones" class="navbar__link">Ofertas</a></li>
+          <li><a href="#testimonios" class="navbar__link">Opiniones</a></li>
+          <li><a href="#contacto" class="navbar__link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Iconos derecha -->
+      <div class="navbar__actions">
+        <a href="#contacto" class="navbar__whatsapp" aria-label="Contactar por WhatsApp">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+        </a>
+        <button class="navbar__toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="inicio" class="hero" aria-label="Sección principal">
+    <div class="hero__overlay"></div>
+    <div class="hero__content fade-in">
+      <p class="hero__subtitle">— Nueva Colección 2026 —</p>
+      <h1 class="hero__title">Define tu <span class="text-accent">estilo</span>,<br>eleva tu esencia</h1>
+      <p class="hero__description">Prendas diseñadas para quienes no siguen tendencias, las crean. Calidad premium, diseño atemporal.</p>
+      <div class="hero__buttons">
+        <a href="#productos" class="btn btn--primary">Ver Colección</a>
+        <a href="#nosotros" class="btn btn--outline">Nuestra Historia</a>
+      </div>
+    </div>
+    <!-- Scroll indicator -->
+    <a href="#nosotros" class="hero__scroll" aria-label="Desplazar hacia abajo">
+      <div class="scroll__mouse">
+        <div class="scroll__wheel"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- ===================== NOSOTROS ===================== -->
+  <section id="nosotros" class="about section" aria-label="Sobre nosotros">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__image fade-in-left">
+          <div class="about__image-wrapper">
+            <div class="image-placeholder image-placeholder--about" role="img" aria-label="Taller de diseño ÉLAN">
+              <span>📸 Imagen de marca</span>
+            </div>
+          </div>
+          <div class="about__badge">
+            <span class="badge__number">+8</span>
+            <span class="badge__text">años de<br>experiencia</span>
+          </div>
+        </div>
+        <div class="about__content fade-in-right">
+          <p class="section__subtitle">— Nuestra Historia —</p>
+          <h2 class="section__title">Moda con <span class="text-accent">propósito</span></h2>
+          <p class="about__paragraph">
+            ÉLAN nació en 2018 con una visión clara: crear ropa que combine la elegancia atemporal con el diseño contemporáneo. Cada pieza es el resultado de un proceso cuidadoso que prioriza la calidad de los materiales, la atención al detalle y la comodidad.
+          </p>
+          <p class="about__paragraph">
+            No seguimos las tendencias del fast fashion. Diseñamos colecciones pensadas para durar, para que te sientas increíble en cualquier ocasión — desde una reunión de trabajo hasta una cena especial.
+          </p>
+          <div class="about__features">
+            <div class="feature">
+              <div class="feature__icon">✦</div>
+              <div class="feature__text">
+                <h4>Materiales Premium</h4>
+                <p>Algodón orgánico, lino italiano y seda natural</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">♻</div>
+              <div class="feature__text">
+                <h4>Moda Sostenible</h4>
+                <p>Producción ética y responsable con el medio ambiente</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">✂</div>
+              <div class="feature__text">
+                <h4>Diseño Exclusivo</h4>
+                <p>Colecciones limitadas con identidad propia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRODUCTOS DESTACADOS ===================== -->
+  <section id="productos" class="products section" aria-label="Productos destacados">
+    <div class="container">
+      <div class="section__header text-center fade-in">
+        <p class="section__subtitle">— Lo Más Vendido —</p>
+        <h2 class="section__title">Productos <span class="text-accent">Destacados</span></h2>
+        <p class="section__description">Piezas seleccionadas que definen la temporada. Estilo, calidad y diseño en cada detalle.</p>
+      </div>
+
+      <!-- Filtros de categorías -->
+      <div class="products__filters fade-in">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="mujer">Mujer</button>
+        <button class="filter-btn" data-filter="hombre">Hombre</button>
+        <button class="filter-btn" data-filter="accesorios">Accesorios</button>
+      </div>
+
+      <!-- Grid de productos -->
+      <div class="products__grid" id="products-grid">
+
+        <!-- Producto 1 -->
+        <article class="product-card fade-in" data-category="mujer">
+          <div class="product-card__image">
+            <div class="image-placeholder image-placeholder--product" style="background: linear-gradient(135deg, #d4c5b0, #a89279);">
+              <span>👗 Blazer Oversize</span>
+            </div>
+            <span class="product-card__badge">Nuevo</span>
+            <div class="product-card__overlay">
+              <button class="product-card__btn" aria-label="Ver Blazer Oversize">Vista Rápida</button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <p class="product-card__category">Mujer</p>
+            <h3 class="product-card__name">Blazer Oversize Milano</h3>
+            <div class="product-card__price">
+              <span class="price__current">$89.99</span>
+              <span class="price__old">$120.00</span>
+            </div>
+            <a href="https://wa.me/1234567890?text=Hola!%20Me%20interesa%20el%20Blazer%20Oversize%20Milano" target="_blank" rel="noopener" class="btn btn--sm btn--primary">
+              Comprar por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="product-card fade-in" data-category="hombre">
+          <div class="product-card__image">
+            <div class="image-placeholder image-placeholder--product" style="background: linear-gradient(135deg, #2c2c2c, #4a4a4a);">
+              <span style="color:#fff">🧥 Camisa Premium</span>
+            </div>
+            <div class="product-card__overlay">
+              <button class="product-card__btn" aria-label="Ver Camisa Oxford">Vista Rápida</button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <p class="product-card__category">Hombre</p>
+            <h3 class="product-card__name">Camisa Oxford Classic</h3>
+            <div class="product-card__price">
+              <span class="price__current">$54.99</span>
+            </div>
+            <a href="https://wa.me/1234567890?text=Hola!%20Me%20interesa%20la%20Camisa%20Oxford%20Classic" target="_blank" rel="noopener" class="btn btn--sm btn--primary">
+              Comprar por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Producto 3 -->
+        <article class="product-card fade-in" data-category="mujer">
+          <div class="product-card__image">
+            <div class="image-placeholder image-placeholder--product" style="background: linear-gradient(135deg, #e8ddd3, #c9b8a8);">
+              <span>👚 Top Seda</span>
+            </div>
+            <span class="product-card__badge product-card__badge--sale">-30%</span>
+            <div class="product-card__overlay">
+              <button class="product-card__btn" aria-label="Ver Top Seda">Vista Rápida</button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <p class="product-card__category">Mujer</p>
+            <h3 class="product-card__name">Top Seda Natural</h3>
+            <div class="product-card__price">
+              <span class="price__current">$34.99</span>
+              <span class="price__old">$49.99</span>
+            </div>
+            <a href="https://wa.me/1234567890?text=Hola!%20Me%20interesa%20el%20Top%20Seda%20Natural" target="_blank" rel="noopener" class="btn btn--sm btn--primary">
+              Comprar por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Producto 4 -->
+        <article class="product-card fade-in" data-category="accesorios">
+          <div class="product-card__image">
+            <div class="image-placeholder image-placeholder--product" style="background: linear-gradient(135deg, #c9a96e, #8b7355);">
+              <span>⌚ Accesorio</span>
+            </div>
+            <div class="product-card__overlay">
+              <button class="product-card__btn" aria-label="Ver Reloj Minimal">Vista Rápida</button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <p class="product-card__category">Accesorios</p>
+            <h3 class="product-card__name">Reloj Minimal Gold</h3>
+            <div class="product-card__price">
+              <span class="price__current">$129.99</span>
+            </div>
+            <a href="https://wa.me/1234567890?text=Hola!%20Me%20interesa%20el%20Reloj%20Minimal%20Gold" target="_blank" rel="noopener" class="btn btn--sm btn--primary">
+              Comprar por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Producto 5 -->
+        <article class="product-card fade-in" data-category="hombre">
+          <div class="product-card__image">
+            <div class="image-placeholder image-placeholder--product" style="background: linear-gradient(135deg, #3a3a3a, #1a1a1a);">
+              <span style="color:#fff">👖 Pantalón</span>
+            </div>
+            <span class="product-card__badge">Nuevo</span>
+            <div class="product-card__overlay">
+              <button class="product-card__btn" aria-label="Ver Pantalón Slim">Vista Rápida</button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <p class="product-card__category">Hombre</p>
+            <h3 class="product-card__name">Pantalón Slim Fit Dark</h3>
+            <div class="product-card__price">
+              <span class="price__current">$64.99</span>
+            </div>
+            <a href="https://wa.me/1234567890?text=Hola!%20Me%20interesa%20el%20Pantalón%20Slim%20Fit%20Dark" target="_blank" rel="noopener" class="btn btn--sm btn--primary">
+              Comprar por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Producto 6 -->
+        <article class="product-card fade-in" data-category="mujer">
+          <div class="product-card__image">
+            <div class="image-placeholder image-placeholder--product" style="background: linear-gradient(135deg, #f0e6dd, #d4b896);">
+              <span>👗 Vestido</span>
+            </div>
+            <span class="product-card__badge product-card__badge--sale">-20%</span>
+            <div class="product-card__overlay">
+              <button class="product-card__btn" aria-label="Ver Vestido Elegante">Vista Rápida</button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <p class="product-card__category">Mujer</p>
+            <h3 class="product-card__name">Vestido Midi Elegance</h3>
+            <div class="product-card__price">
+              <span class="price__current">$79.99</span>
+              <span class="price__old">$99.99</span>
+            </div>
+            <a href="https://wa.me/1234567890?text=Hola!%20Me%20interesa%20el%20Vestido%20Midi%20Elegance" target="_blank" rel="noopener" class="btn btn--sm btn--primary">
+              Comprar por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Producto 7 -->
+        <article class="product-card fade-in" data-category="accesorios">
+          <div class="product-card__image">
+            <div class="image-placeholder image-placeholder--product" style="background: linear-gradient(135deg, #8b7355, #5c4a35);">
+              <span style="color:#fff">👜 Bolso</span>
+            </div>
+            <div class="product-card__overlay">
+              <button class="product-card__btn" aria-label="Ver Bolso Cuero">Vista Rápida</button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <p class="product-card__category">Accesorios</p>
+            <h3 class="product-card__name">Bolso Cuero Artesanal</h3>
+            <div class="product-card__price">
+              <span class="price__current">$149.99</span>
+            </div>
+            <a href="https://wa.me/1234567890?text=Hola!%20Me%20interesa%20el%20Bolso%20Cuero%20Artesanal" target="_blank" rel="noopener" class="btn btn--sm btn--primary">
+              Comprar por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <!-- Producto 8 -->
+        <article class="product-card fade-in" data-category="hombre">
+          <div class="product-card__image">
+            <div class="image-placeholder image-placeholder--product" style="background: linear-gradient(135deg, #556b7a, #2c3e50);">
+              <span style="color:#fff">🧥 Chaqueta</span>
+            </div>
+            <span class="product-card__badge">Nuevo</span>
+            <div class="product-card__overlay">
+              <button class="product-card__btn" aria-label="Ver Chaqueta Denim">Vista Rápida</button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <p class="product-card__category">Hombre</p>
+            <h3 class="product-card__name">Chaqueta Denim Vintage</h3>
+            <div class="product-card__price">
+              <span class="price__current">$109.99</span>
+            </div>
+            <a href="https://wa.me/1234567890?text=Hola!%20Me%20interesa%20la%20Chaqueta%20Denim%20Vintage" target="_blank" rel="noopener" class="btn btn--sm btn--primary">
+              Comprar por WhatsApp
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Botón ver más -->
+      <div class="text-center fade-in" style="margin-top: 3rem;">
+        <a href="https://wa.me/1234567890?text=Hola!%20Quiero%20ver%20el%20catálogo%20completo" target="_blank" rel="noopener" class="btn btn--outline">
+          Ver Catálogo Completo →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CATEGORÍAS ===================== -->
+  <section id="categorias" class="categories section" aria-label="Categorías">
+    <div class="container">
+      <div class="section__header text-center fade-in">
+        <p class="section__subtitle">— Explora —</p>
+        <h2 class="section__title">Nuestras <span class="text-accent">Categorías</span></h2>
+      </div>
+
+      <div class="categories__grid">
+        <!-- Mujer -->
+        <a href="#productos" class="category-card fade-in" data-category="mujer">
+          <div class="category-card__bg" style="background: linear-gradient(135deg, #f0e6dd, #d4b896);"></div>
+          <div class="category-card__content">
+            <span class="category-card__icon">👗</span>
+            <h3 class="category-card__title">Mujer</h3>
+            <p class="category-card__count">+120 productos</p>
+          </div>
+        </a>
+
+        <!-- Hombre -->
+        <a href="#productos" class="category-card fade-in" data-category="hombre">
+          <div class="category-card__bg" style="background: linear-gradient(135deg, #2c2c2c, #4a4a4a);"></div>
+          <div class="category-card__content">
+            <span class="category-card__icon">🧥</span>
+            <h3 class="category-card__title">Hombre</h3>
+            <p class="category-card__count">+95 productos</p>
+          </div>
+        </a>
+
+        <!-- Accesorios -->
+        <a href="#productos" class="category-card fade-in" data-category="accesorios">
+          <div class="category-card__bg" style="background: linear-gradient(135deg, #c9a96e, #8b7355);"></div>
+          <div class="category-card__content">
+            <span class="category-card__icon">⌚</span>
+            <h3 class="category-card__title">Accesorios</h3>
+            <p class="category-card__count">+60 productos</p>
+          </div>
+        </a>
+
+        <!-- Ofertas -->
+        <a href="#promociones" class="category-card fade-in">
+          <div class="category-card__bg" style="background: linear-gradient(135deg, #1a1a1a, #333);"></div>
+          <div class="category-card__content">
+            <span class="category-card__icon">🔥</span>
+            <h3 class="category-card__title">Ofertas</h3>
+            <p class="category-card__count">Hasta 50% OFF</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROMOCIONES ===================== -->
+  <section id="promociones" class="promo section" aria-label="Promociones especiales">
+    <div class="promo__container">
+      <div class="promo__content fade-in">
+        <p class="promo__label">🔥 Oferta Limitada</p>
+        <h2 class="promo__title">Hasta <span class="text-accent">50% OFF</span> en toda la colección de temporada</h2>
+        <p class="promo__description">Renueva tu armario con piezas exclusivas a precios increíbles. Oferta válida por tiempo limitado — no te la pierdas.</p>
+        <div class="promo__countdown" id="countdown">
+          <div class="countdown__item">
+            <span class="countdown__number" id="days">00</span>
+            <span class="countdown__label">Días</span>
+          </div>
+          <div class="countdown__item">
+            <span class="countdown__number" id="hours">00</span>
+            <span class="countdown__label">Horas</span>
+          </div>
+          <div class="countdown__item">
+            <span class="countdown__number" id="minutes">00</span>
+            <span class="countdown__label">Minutos</span>
+          </div>
+          <div class="countdown__item">
+            <span class="countdown__number" id="seconds">00</span>
+            <span class="countdown__label">Segundos</span>
+          </div>
+        </div>
+        <a href="https://wa.me/1234567890?text=Hola!%20Quiero%20aprovechar%20la%20oferta%20del%2050%25%20OFF" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+          Comprar Ahora — 50% OFF
+        </a>
+      </div>
+      <div class="promo__visual fade-in-right">
+        <div class="promo__image-placeholder">
+          <span style="font-size: 4rem;">🛍️</span>
+          <p>Colección Premium</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIOS ===================== -->
+  <section id="testimonios" class="testimonials section" aria-label="Testimonios de clientes">
+    <div class="container">
+      <div class="section__header text-center fade-in">
+        <p class="section__subtitle">— Opiniones Reales —</p>
+        <h2 class="section__title">Lo que dicen nuestros <span class="text-accent">clientes</span></h2>
+        <p class="section__description">Miles de personas ya confían en ÉLAN para vestir con estilo y calidad.</p>
+      </div>
+
+      <div class="testimonials__slider fade-in">
+        <div class="testimonials__track" id="testimonials-track">
+
+          <!-- Testimonio 1 -->
+          <div class="testimonial-card active">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <blockquote class="testimonial-card__text">
+              "La calidad de las prendas es increíble. Compré el blazer y la tela se siente premium de verdad. El envío fue rápido y el empaque hermoso. ¡100% recomendado!"
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">ML</div>
+              <div class="testimonial-card__info">
+                <h4>María López</h4>
+                <p>Cliente desde 2022</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <blockquote class="testimonial-card__text">
+              "Llevo 3 compras y cada vez quedo más satisfecho. La atención por WhatsApp es excelente, te asesoran con las tallas y todo. La ropa queda exactamente como en las fotos."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">CR</div>
+              <div class="testimonial-card__info">
+                <h4>Carlos Ramírez</h4>
+                <p>Cliente desde 2021</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <blockquote class="testimonial-card__text">
+              "El vestido Midi Elegance es mi favorito. Lo usé en una boda y recibí muchos cumplidos. Se nota la diferencia con otras marcas. Definitivamente seguiré comprando aquí."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">AG</div>
+              <div class="testimonial-card__info">
+                <h4>Ana García</h4>
+                <p>Cliente desde 2023</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 4 -->
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <blockquote class="testimonial-card__text">
+              "Compré la chaqueta denim para mi esposo y le encantó. El corte es perfecto y la calidad del material es superior. Excelente relación precio-calidad."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">PS</div>
+              <div class="testimonial-card__info">
+                <h4>Patricia Sánchez</h4>
+                <p>Cliente desde 2024</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Controles del slider -->
+        <div class="testimonials__controls">
+          <button class="testimonials__btn" id="prev-testimonial" aria-label="Testimonio anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="testimonials__dots" id="testimonials-dots"></div>
+          <button class="testimonials__btn" id="next-testimonial" aria-label="Testimonio siguiente">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACTO ===================== -->
+  <section id="contacto" class="contact section" aria-label="Contacto">
+    <div class="container">
+      <div class="section__header text-center fade-in">
+        <p class="section__subtitle">— Hablemos —</p>
+        <h2 class="section__title">Ponte en <span class="text-accent">contacto</span></h2>
+        <p class="section__description">¿Tienes dudas sobre tallas, envíos o productos? Escríbenos y te responderemos al instante.</p>
+      </div>
+
+      <div class="contact__grid">
+        <!-- Formulario -->
+        <div class="contact__form-wrapper fade-in-left">
+          <form class="contact__form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label">Nombre completo *</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" required minlength="2">
+              <span class="form-error" id="name-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Correo electrónico *</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required>
+              <span class="form-error" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone" class="form-label">Teléfono (opcional)</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="">
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Mensaje *</label>
+              <textarea id="message" name="message" class="form-input form-textarea" placeholder="¿En qué podemos ayudarte?" required minlength="10" rows="5"></textarea>
+              <span class="form-error" id="message-error"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full">
+              Enviar Mensaje
+            </button>
+            <p class="form-success" id="form-success" style="display:none;">✅ ¡Mensaje enviado correctamente! Te responderemos pronto.</p>
+          </form>
+        </div>
+
+        <!-- Info de contacto -->
+        <div class="contact__info fade-in-right">
+          <div class="contact__info-card">
+            <h3>Contáctanos directamente</h3>
+            <p>La forma más rápida de obtener respuestas es por WhatsApp.</p>
+            <a href="https://wa.me/1234567890?text=Hola!%20Tengo%20una%20consulta%20sobre%20sus%20productos" target="_blank" rel="noopener" class="btn btn--whatsapp btn--full">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Escribir por WhatsApp
+            </a>
+          </div>
+
+          <div class="contact__details">
+            <div class="contact__detail">
+              <div class="contact__detail-icon">📍</div>
+              <div>
+                <h4>Dirección</h4>
+                <p></p>
+              </div>
+            </div>
+            <div class="contact__detail">
+              <div class="contact__detail-icon">📧</div>
+              <div>
+                <h4>Email</h4>
+                <p></p>
+              </div>
+            </div>
+            <div class="contact__detail">
+              <div class="contact__detail-icon">📞</div>
+              <div>
+                <h4>Teléfono</h4>
+                <p></p>
+              </div>
+            </div>
+            <div class="contact__detail">
+              <div class="contact__detail-icon">🕐</div>
+              <div>
+                <h4>Horario</h4>
+                <p>Lun - Sáb: 9:00 - 20:00</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Redes sociales -->
+          <div class="contact__social">
+            <h4>Síguenos</h4>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="TikTok" target="_blank" rel="noopener">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Pinterest" target="_blank" rel="noopener">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.182-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.425 1.808-2.425.853 0 1.265.64 1.265 1.408 0 .858-.546 2.14-.828 3.33-.236.995.5 1.807 1.48 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.745 2.282a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.222-.335.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.527-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Columna 1: Marca -->
+        <div class="footer__brand">
+          <a href="#inicio" class="footer__logo">ÉLAN</a>
+          <p class="footer__tagline">Moda premium para quienes buscan estilo, calidad y diseño en cada prenda.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Links rápidos -->
+        <div class="footer__links">
+          <h4>Tienda</h4>
+          <ul>
+            <li><a href="#productos">Novedades</a></li>
+            <li><a href="#productos">Más Vendidos</a></li>
+            <li><a href="#categorias">Mujer</a></li>
+            <li><a href="#categorias">Hombre</a></li>
+            <li><a href="#promociones">Ofertas</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Ayuda -->
+        <div class="footer__links">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#">Guía de Tallas</a></li>
+            <li><a href="#">Envíos y Devoluciones</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Horarios y pagos -->
+        <div class="footer__info">
+          <h4>Horarios</h4>
+          <p>Lunes a Viernes: 9:00 - 20:00</p>
+          <p>Sábados: 10:00 - 18:00</p>
+          <p>Domingos: Cerrado</p>
+
+          <h4 style="margin-top: 1.5rem;">Métodos de Pago</h4>
+          <div class="footer__payments">
+            <span class="payment-icon" title="Visa">💳</span>
+            <span class="payment-icon" title="Mastercard">💳</span>
+            <span class="payment-icon" title="PayPal">🅿️</span>
+            <span class="payment-icon" title="Transferencia">🏦</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer__bottom">
+        <p>© 2026 ÉLAN Fashion. Todos los derechos reservados.</p>
+        <p class="footer__made">Hecho con ❤️ para amantes de la moda</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== BOTÓN VOLVER ARRIBA ===================== -->
+  <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <!-- WhatsApp Flotante -->
+  <a href="https://wa.me/1234567890?text=Hola!%20Tengo%20una%20consulta" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chatea con nosotros por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
