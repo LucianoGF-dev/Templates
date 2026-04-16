@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Mi Tienda</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- JS -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- BOTÓN WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20más%20información%20sobre%20sus%20productos"
+        class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">¡Escríbenos!</span>
+    </a>
+
+    <!-- 🔥 HEADER MEJORADO 🔥 -->
+    <header class="header">
+
+        <!-- Barra principal -->
+        <div class="header-main">
+            <div class="logo">
+                <span class="logo-icon">
+                    <i class="fa-solid fa-computer"></i>
+                </span>
+                <div class="logo-text-wrapper">
+                    <span class="logo-text">MiTienda</span>
+                    <span class="logo-subtext">Tech</span>
+                </div>
+            </div>
+
+            <div class="header-search-wrapper">
+                <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" id="search" class="header-search-input" placeholder="Buscar productos, marcas o categorías..." autocomplete="off">
+                <button id="clearSearch" class="clear-search" aria-label="Limpiar búsqueda">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="search-suggestions" id="searchSuggestions">
+                    <!-- Se llena dinámicamente -->
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <a href="#" class="header-link" aria-label="Mi cuenta">
+                    <i class="fa-regular fa-user"></i>
+                    <span class="header-link-text">Cuenta</span>
+                </a>
+                <a href="#" class="header-link" aria-label="Lista de deseos">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="header-link-text">Favoritos</span>
+                </a>
+                <a href="#" class="header-link header-cart" aria-label="Carrito de compras">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">3</span>
+                    <span class="header-link-text">Carrito</span>
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Menú" aria-expanded="false">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+
+        <!-- Navegación principal -->
+        <nav class="header-nav" id="headerNav">
+            <ul class="nav-list">
+                <li><a href="#" class="nav-link active"><i class="fa-solid fa-house"></i>Inicio</a></li>
+                <li><a href="#" class="nav-link"><i class="fa-solid fa-laptop"></i>Laptops</a></li>
+                <li><a href="#" class="nav-link"><i class="fa-solid fa-mobile-screen"></i>Celulares</a></li>
+                <li><a href="#" class="nav-link"><i class="fa-solid fa-headphones"></i>Audio</a></li>
+                <li><a href="#" class="nav-link"><i class="fa-solid fa-gamepad"></i>Gaming</a></li>
+                <li><a href="#" class="nav-link"><i class="fa-solid fa-tag"></i>Ofertas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>
+                    <i class="fa-solid fa-filter"></i>
+                    Filtros
+                </h3>
+                <button id="clearFiltersBtn" class="clear-filters">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    Limpiar
+                </button>
+            </div>
+
+            <div class="filter-group">
+                <label for="categoryFilter">
+                    <i class="fa-solid fa-folder"></i>
+                    Categoría
+                </label>
+                <select id="categoryFilter" class="filter-select">
+                    <option value="">Todas las categorías</option>
+                    <option value="laptop">Laptops</option>
+                    <option value="phone">Celulares</option>
+                    <option value="accessory">Accesorios</option>
+                    <option value="hogar">Hogar</option>
+                    <option value="musica">Música</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="sortFilter">
+                    <i class="fa-solid fa-arrow-down-wide-short"></i>
+                    Ordenar por
+                </label>
+                <select id="sortFilter" class="filter-select">
+                    <option value="default">✨ Destacados primero</option>
+                    <option value="price_asc">💰 Precio: menor a mayor</option>
+                    <option value="price_desc">💰 Precio: mayor a menor</option>
+                    <option value="featured_only">⭐ Solo destacados</option>
+                    <option value="best_seller_only">🔥 Más vendidos</option>
+                    <option value="new_only">🆕 Nuevos productos</option>
+                </select>
+            </div>
+
+            <div class="filter-stats">
+                <i class="fa-solid fa-box-open"></i>
+                <span id="resultsCount">0</span>
+                <span class="stats-text">productos encontrados</span>
+            </div>
+        </aside>
+
+        <!-- PRODUCTOS -->
+        <main class="products">
+            <div class="topbar">
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid" aria-label="Vista cuadrícula">
+                        <i class="fa-solid fa-grip"></i> Grid
+                    </button>
+                    <button class="view-btn" data-view="list" aria-label="Vista lista">
+                        <i class="fa-solid fa-list"></i> Lista
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid" id="productGrid"></div>
+
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <div class="empty-illustration">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                </div>
+                <h3>No encontramos productos</h3>
+                <p>Intenta ajustar los filtros o usar otras palabras clave</p>
+                <button class="btn-reset" onclick="clearAllFilters()">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    Restablecer filtros
+                </button>
+            </div>
+        </main>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 <strong>TechStore</strong> — Tecnología que inspira</p>
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Efecto de partículas de fondo -->
+    <div class="bg-particles" aria-hidden="true"></div>
+
+</body>
+
+</html>
