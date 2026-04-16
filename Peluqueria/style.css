@@ -537,7 +537,7 @@ button {
 /* ==================== SECCIÓN HEADERS ==================== */
 .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
 .section-badge {
@@ -617,7 +617,7 @@ button {
     position: relative;
     z-index: 2;
     text-align: center;
-    max-width: 900px;
+    margin-top:100px;
     padding: 0 20px;
 }
 
