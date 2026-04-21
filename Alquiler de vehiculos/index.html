@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoElite Rent | Alquiler de Vehículos Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============ LOADER ============ -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">AutoElite Rent</div>
+        </div>
+    </div>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav id="navbar" class="navbar">
+        <div class="container navbar-inner">
+            <a href="#" class="logo">
+                <span class="logo-icon">🚗</span>
+                <span class="logo-text">Auto<span class="logo-highlight">Elite</span></span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#inicio" data-i18n="nav_home">Inicio</a>
+                <a href="#catalogo" data-i18n="nav_catalog">Catálogo</a>
+                <a href="#testimonios" data-i18n="nav_testimonials">Testimonios</a>
+                <a href="#faq" data-i18n="nav_faq">FAQ</a>
+                <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+                <button class="btn-admin-toggle" id="btnAdminToggle" title="Panel Admin">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/>
+                        <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
+                    </svg>
+                </button>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="es" id="btnES">🇪🇸 ES</button>
+                    <button class="lang-btn" data-lang="en" id="btnEN">🇺🇸 EN</button>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-particles"></div>
+        <div class="container hero-content">
+            <span class="hero-badge" data-i18n="hero_badge">★ Servicio Premium desde 2015</span>
+            <h1 class="hero-title" data-i18n="hero_title">Encuentra tu <span class="text-gradient">vehículo ideal</span> para cada momento</h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">La flota más exclusiva de la ciudad. Precios competitivos, servicio de primera y disponibilidad inmediata.</p>
+            <div class="hero-buttons">
+                <a href="#catalogo" class="btn btn-primary" data-i18n="hero_btn_catalog">Ver Catálogo</a>
+                <a href="#contacto" class="btn btn-outline" data-i18n="hero_btn_contact">Contáctanos</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="150">0</span>
+                    <span class="stat-label" data-i18n="stat_vehicles">Vehículos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="5000">0</span>
+                    <span class="stat-label" data-i18n="stat_clients">Clientes felices</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="9">0</span>
+                    <span class="stat-label" data-i18n="stat_years">Años de experiencia</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="24">0</span>
+                    <span class="stat-label" data-i18n="stat_support">Soporte 24/7</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span data-i18n="scroll_down">Desplázate</span>
+        </div>
+    </section>
+
+    <!-- ============ FILTROS ============ -->
+    <section id="catalogo" class="catalog-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="catalog_badge">NUESTRA FLOTA</span>
+                <h2 class="section-title" data-i18n="catalog_title">Vehículos <span class="text-gradient">Disponibles</span></h2>
+                <p class="section-desc" data-i18n="catalog_desc">Explora nuestra selección premium y encuentra el auto perfecto para ti</p>
+            </div>
+
+            <div class="filters-wrapper">
+                <button class="filters-toggle" id="filtersToggle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="20" y2="12"/><line x1="12" y1="18" x2="20" y2="18"/>
+                        <circle cx="6" cy="6" r="2" fill="currentColor"/><circle cx="10" cy="12" r="2" fill="currentColor"/><circle cx="14" cy="18" r="2" fill="currentColor"/>
+                    </svg>
+                    <span data-i18n="filters_btn">Filtros Avanzados</span>
+                </button>
+
+                <div class="filters-panel" id="filtersPanel">
+                    <div class="filters-grid">
+                        <div class="filter-group">
+                            <label data-i18n="filter_brand">Marca</label>
+                            <select id="filterBrand">
+                                <option value="" data-i18n="filter_all">Todas</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label data-i18n="filter_type">Tipo</label>
+                            <select id="filterType">
+                                <option value="" data-i18n="filter_all">Todos</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label data-i18n="filter_year">Año</label>
+                            <select id="filterYear">
+                                <option value="" data-i18n="filter_all">Todos</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label data-i18n="filter_availability">Disponibilidad</label>
+                            <select id="filterAvailability">
+                                <option value="" data-i18n="filter_all">Todos</option>
+                                <option value="available" data-i18n="status_available">Disponible</option>
+                                <option value="reserved" data-i18n="status_reserved">Reservado</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label data-i18n="filter_price_min">Precio Mín ($/día)</label>
+                            <input type="number" id="filterPriceMin" placeholder="0" min="0">
+                        </div>
+                        <div class="filter-group">
+                            <label data-i18n="filter_price_max">Precio Máx ($/día)</label>
+                            <input type="number" id="filterPriceMax" placeholder="999" min="0">
+                        </div>
+                    </div>
+                    <div class="filter-search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                        <input type="text" id="filterSearch" placeholder="" data-i18n-placeholder="filter_search_placeholder">
+                    </div>
+                    <button class="btn btn-secondary btn-sm" id="clearFilters" data-i18n="clear_filters">Limpiar Filtros</button>
+                </div>
+            </div>
+
+            <div class="results-count" id="resultsCount"></div>
+            <div class="vehicles-grid" id="vehiclesGrid">
+                <!-- Vehicles rendered by JS -->
+            </div>
+            <div class="no-results" id="noResults" style="display:none;">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    <line x1="8" y1="8" x2="14" y2="14"/><line x1="14" y1="8" x2="8" y2="14"/>
+                </svg>
+                <h3 data-i18n="no_results_title">No se encontraron vehículos</h3>
+                <p data-i18n="no_results_desc">Intenta ajustar los filtros de búsqueda</p>
+                <button class="btn btn-primary" id="resetFiltersBtn" data-i18n="clear_filters">Limpiar Filtros</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TESTIMONIOS ============ -->
+    <section id="testimonios" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="testimonials_badge">TESTIMONIOS</span>
+                <h2 class="section-title" data-i18n="testimonials_title">Lo que dicen nuestros <span class="text-gradient">clientes</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text" data-i18n="testimonial_1_text">"Excelente servicio. El auto estaba impecable y el proceso de alquiler fue rapidísimo. Definitivamente volveré."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CM</div>
+                        <div>
+                            <div class="author-name">Carlos Mendoza</div>
+                            <div class="author-role" data-i18n="testimonial_1_role">Empresario</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text" data-i18n="testimonial_2_text">"Los mejores precios de la zona y una atención al cliente de primera. La SUV que alquilamos fue perfecta para nuestras vacaciones."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AR</div>
+                        <div>
+                            <div class="author-name">Ana Rodríguez</div>
+                            <div class="author-role" data-i18n="testimonial_2_role">Diseñadora</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text" data-i18n="testimonial_3_text">"Alquilé un deportivo para un evento especial y fue una experiencia increíble. Todo el proceso fue transparente y profesional."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JP</div>
+                        <div>
+                            <div class="author-name">Jorge Pérez</div>
+                            <div class="author-role" data-i18n="testimonial_3_role">Ingeniero</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="faq_badge">FAQ</span>
+                <h2 class="section-title" data-i18n="faq_title">Preguntas <span class="text-gradient">Frecuentes</span></h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq_q1">¿Qué documentos necesito para alquilar?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a1">Necesitas licencia de conducir vigente, cédula de identidad o pasaporte, y una tarjeta de crédito para el depósito de garantía. Edad mínima: 21 años.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq_q2">¿Puedo cancelar mi reserva?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a2">Sí, puedes cancelar hasta 24 horas antes de la fecha de inicio sin penalización. Cancelaciones con menos de 24 horas tienen un cargo del 10%.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq_q3">¿El seguro está incluido?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a3">Todos nuestros vehículos incluyen seguro básico. Ofrecemos seguros premium y cobertura total como extras opcionales para tu tranquilidad.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq_q4">¿Puedo devolver el auto en otra ubicación?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a4">Sí, ofrecemos devolución en ubicaciones alternativas con un costo adicional que varía según la distancia. Consulta disponibilidad al momento de reservar.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq_q5">¿Cuál es la política de combustible?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a5">Entregamos el vehículo con tanque lleno y debe ser devuelto de la misma manera. De lo contrario, se cobrará el combustible faltante más un cargo de servicio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ MAPA + CONTACTO ============ -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="contact_badge">CONTACTO</span>
+                <h2 class="section-title" data-i18n="contact_title">Encuéntranos <span class="text-gradient">aquí</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <h4 data-i18n="contact_address_title">Dirección</h4>
+                        <p data-i18n="contact_address"></p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <h4 data-i18n="contact_phone_title">Teléfono</h4>
+                        <p></p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <h4 data-i18n="contact_email_title">Email</h4>
+                        <p></p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">🕐</div>
+                        <h4 data-i18n="contact_hours_title">Horario</h4>
+                        <p data-i18n="contact_hours">Lun - Sáb: 8:00 AM - 8:00 PM<br>Dom: 9:00 AM - 5:00 PM</p>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <h3 data-i18n="contact_form_title">Envíanos un mensaje</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-i18n="form_name">Nombre</label>
+                                <input type="text" id="contactName" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="form_email">Email</label>
+                                <input type="email" id="contactEmail" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="form_message">Mensaje</label>
+                            <textarea id="contactMessage" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" data-i18n="form_send">Enviar Mensaje</button>
+                    </form>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.123456789!2d-74.0721!3d4.6097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMzYnMzUuMCJOIDc0wrAwNCcxOS42Ilc!5e0!3m2!1ses!2sco!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo footer-logo">
+                        <span class="logo-icon">🚗</span>
+                        <span class="logo-text">Auto<span class="logo-highlight">Elite</span></span>
+                    </a>
+                    <p class="footer-desc" data-i18n="footer_desc">Tu socio de confianza en alquiler de vehículos premium. Más de 9 años brindando la mejor experiencia de conducción.</p>
+                    
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_links">Enlaces Rápidos</h4>
+                    <a href="#inicio" data-i18n="nav_home">Inicio</a>
+                    <a href="#catalogo" data-i18n="nav_catalog">Catálogo</a>
+                    <a href="#testimonios" data-i18n="nav_testimonials">Testimonios</a>
+                    <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_services">Servicios</h4>
+                    <a href="#" data-i18n="footer_srv_rental">Alquiler diario</a>
+                    <a href="#" data-i18n="footer_srv_weekly">Alquiler semanal</a>
+                    <a href="#" data-i18n="footer_srv_monthly">Alquiler mensual</a>
+                    <a href="#" data-i18n="footer_srv_corporate">Corporativo</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_legal">Legal</h4>
+                    <a href="#" data-i18n="footer_terms">Términos y Condiciones</a>
+                    <a href="#" data-i18n="footer_privacy">Política de Privacidad</a>
+                    <a href="#" data-i18n="footer_cookies">Política de Cookies</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 AutoElite Rent. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ MODAL ALQUILER ============ -->
+    <div class="modal-overlay" id="rentalModal">
+        <div class="modal modal-rental">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-header">
+                <h2 data-i18n="rental_title">Solicitar Alquiler</h2>
+            </div>
+            <div class="modal-body">
+                <div class="rental-vehicle-info" id="rentalVehicleInfo"></div>
+
+                <form id="rentalForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-i18n="form_full_name">Nombre Completo *</label>
+                            <input type="text" id="rentalName" required>
+                            <span class="form-error" id="errorName"></span>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="form_phone">Teléfono *</label>
+                            <input type="tel" id="rentalPhone" required>
+                            <span class="form-error" id="errorPhone"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-i18n="form_start_date">Fecha de Inicio *</label>
+                            <input type="date" id="rentalStartDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="form_end_date">Fecha de Devolución *</label>
+                            <input type="date" id="rentalEndDate" required>
+                        </div>
+                    </div>
+
+                    <div class="extras-section">
+                        <h4 data-i18n="extras_title">Extras Opcionales</h4>
+                        <div class="extras-grid">
+                            <label class="extra-item">
+                                <input type="checkbox" id="extraInsurance" data-price="15">
+                                <div class="extra-content">
+                                    <span class="extra-icon">🛡️</span>
+                                    <span class="extra-name" data-i18n="extra_insurance">Seguro Premium</span>
+                                    <span class="extra-price">$15/día</span>
+                                </div>
+                            </label>
+                            <label class="extra-item">
+                                <input type="checkbox" id="extraGPS" data-price="5">
+                                <div class="extra-content">
+                                    <span class="extra-icon">📍</span>
+                                    <span class="extra-name" data-i18n="extra_gps">GPS Navegador</span>
+                                    <span class="extra-price">$5/día</span>
+                                </div>
+                            </label>
+                            <label class="extra-item">
+                                <input type="checkbox" id="extraChildSeat" data-price="8">
+                                <div class="extra-content">
+                                    <span class="extra-icon">👶</span>
+                                    <span class="extra-name" data-i18n="extra_child">Silla para Niño</span>
+                                    <span class="extra-price">$8/día</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="rental-summary" id="rentalSummary">
+                        <h4 data-i18n="summary_title">Resumen</h4>
+                        <div class="summary-row">
+                            <span data-i18n="summary_days">Días:</span>
+                            <span id="summaryDays">0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span data-i18n="summary_subtotal">Subtotal:</span>
+                            <span id="summarySubtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span data-i18n="summary_extras">Extras:</span>
+                            <span id="summaryExtras">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>IVA (16%):</span>
+                            <span id="summaryTax">$0.00</span>
+                        </div>
+                        <div class="summary-divider"></div>
+                        <div class="summary-row summary-total">
+                            <span data-i18n="summary_total">Total:</span>
+                            <span id="summaryTotal">$0.00</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-outline" id="modalCancel" data-i18n="btn_cancel">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" data-i18n="btn_confirm_whatsapp">✓ Confirmar por WhatsApp</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ MODAL ADMIN ============ -->
+    <div class="modal-overlay" id="adminModal">
+        <div class="modal modal-admin">
+            <button class="modal-close" id="adminModalClose">&times;</button>
+            <div class="modal-header">
+                <h2>⚙️ <span data-i18n="admin_title">Panel Administrativo</span></h2>
+            </div>
+            <div class="modal-body">
+                <div class="admin-tabs">
+                    <button class="admin-tab active" data-tab="vehicles" data-i18n="admin_tab_vehicles">Vehículos</button>
+                    <button class="admin-tab" data-tab="reservations" data-i18n="admin_tab_reservations">Reservas</button>
+                </div>
+
+                <!-- Tab Vehículos -->
+                <div class="admin-tab-content active" id="tabVehicles">
+                    <button class="btn btn-primary btn-sm" id="btnAddVehicle" data-i18n="admin_add_vehicle">+ Agregar Vehículo</button>
+
+                    <div class="admin-vehicle-form" id="adminVehicleForm" style="display:none;">
+                        <h3 id="adminFormTitle" data-i18n="admin_form_new">Nuevo Vehículo</h3>
+                        <input type="hidden" id="adminVehicleId">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-i18n="admin_v_name">Nombre</label>
+                                <input type="text" id="adminVName" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="admin_v_brand">Marca</label>
+                                <input type="text" id="adminVBrand" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-i18n="admin_v_type">Tipo</label>
+                                <select id="adminVType">
+                                    <option value="Sedan">Sedan</option>
+                                    <option value="SUV">SUV</option>
+                                    <option value="Pickup">Pickup</option>
+                                    <option value="Deportivo">Deportivo</option>
+                                    <option value="Económico">Económico</option>
+                                    <option value="Van">Van</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="admin_v_year">Año</label>
+                                <input type="number" id="adminVYear" min="2015" max="2030" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-i18n="admin_v_price">Precio/día ($)</label>
+                                <input type="number" id="adminVPrice" min="0" step="0.01" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="admin_v_status">Estado</label>
+                                <select id="adminVStatus">
+                                    <option value="available" data-i18n="status_available">Disponible</option>
+                                    <option value="reserved" data-i18n="status_reserved">Reservado</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>URL Imagen</label>
+                            <input type="text" id="adminVImage" placeholder="https://...">
+                        </div>
+                        <div class="admin-form-actions">
+                            <button class="btn btn-secondary btn-sm" id="adminCancelVehicle" data-i18n="btn_cancel">Cancelar</button>
+                            <button class="btn btn-primary btn-sm" id="adminSaveVehicle" data-i18n="btn_save">Guardar</button>
+                        </div>
+                    </div>
+
+                    <div class="admin-vehicles-list" id="adminVehiclesList"></div>
+                </div>
+
+                <!-- Tab Reservas -->
+                <div class="admin-tab-content" id="tabReservations">
+                    <div class="admin-reservations-list" id="adminReservationsList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ WHATSAPP FLOTANTE ============ -->
+    <a href=""  class="whatsapp-float" id="whatsappFloat">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- ============ BACK TO TOP ============ -->
+    <button class="back-to-top" id="backToTop">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </button>
+
+    <!-- ============ NOTIFICATION ============ -->
+    <div class="notification" id="notification">
+        <span class="notification-icon"></span>
+        <span class="notification-text"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
